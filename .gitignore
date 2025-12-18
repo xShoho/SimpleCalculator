@@ -483,4 +483,4 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
-./project_specification.md
+project_specification.md
