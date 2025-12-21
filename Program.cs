@@ -44,6 +44,27 @@ switch (choice)
         // Substraction logic
         Console.WriteLine("Provide an x and y numbers");
         Console.Write("x: ");
+        string? subX = Console.ReadLine();
+        Console.Write("y: ");
+        string? subY = Console.ReadLine();
+
+        if (
+            double.TryParse(subX, out double subXDouble)
+            && double.TryParse(subY, out double subYDouble)
+        )
+        {
+            Console.WriteLine($"{subXDouble} - {subYDouble} = {subXDouble - subYDouble}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, not a number");
+        }
+
+        break;
+    case 3:
+        // Multiplication logic
+        Console.WriteLine("Provide an x and y numbers");
+        Console.Write("x: ");
         string? mulX = Console.ReadLine();
         Console.Write("y: ");
         string? mulY = Console.ReadLine();
@@ -61,12 +82,29 @@ switch (choice)
         }
 
         break;
-    case 3:
-        // Multiplication logic
-        break;
     case 4:
         // Division logic
-        Console.WriteLine("Not yet implemented");
+        Console.WriteLine("Provide an x and y numbers");
+        Console.Write("x: ");
+        string? divX = Console.ReadLine();
+        Console.Write("y: ");
+        string? divY = Console.ReadLine();
+
+        if (
+            double.TryParse(divX, out double divXDouble)
+            && double.TryParse(divY, out double divYDouble)
+        )
+        {
+            if (divYDouble != 0)
+            {
+                Console.WriteLine($"{divXDouble} / {divYDouble} = {divXDouble / divYDouble}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, not a number");
+        }
+
         break;
     case 5:
         Console.WriteLine("Exit");
