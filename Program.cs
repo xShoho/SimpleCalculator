@@ -24,6 +24,8 @@ while (running)
         break;
     }
 
+    Console.Clear();
+
     switch (choice)
     {
         case 1:
