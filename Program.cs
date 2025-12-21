@@ -23,23 +23,46 @@ switch (choice)
     case 1:
         Console.WriteLine("Provide an x and y numbers");
         Console.Write("x: ");
-        string? x = Console.ReadLine();
+        string? addX = Console.ReadLine();
         Console.Write("y: ");
-        string? y = Console.ReadLine();
+        string? addY = Console.ReadLine();
 
-        if (double.TryParse(x, out double num1) && double.TryParse(y, out double num2))
+        if (
+            double.TryParse(addX, out double addXDouble)
+            && double.TryParse(addY, out double addYDouble)
+        )
         {
-            Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+            Console.WriteLine($"{addXDouble} + {addYDouble} = {addXDouble + addYDouble}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, not a number");
         }
 
         break;
     case 2:
         // Substraction logic
-        Console.WriteLine("Not yet implemented");
+        Console.WriteLine("Provide an x and y numbers");
+        Console.Write("x: ");
+        string? mulX = Console.ReadLine();
+        Console.Write("y: ");
+        string? mulY = Console.ReadLine();
+
+        if (
+            double.TryParse(mulX, out double mulXDouble)
+            && double.TryParse(mulY, out double mulYDouble)
+        )
+        {
+            Console.WriteLine($"{mulXDouble} * {mulYDouble} = {mulXDouble * mulYDouble}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, not a number");
+        }
+
         break;
     case 3:
         // Multiplication logic
-        Console.WriteLine("Not yet implemented");
         break;
     case 4:
         // Division logic
@@ -54,4 +77,3 @@ switch (choice)
 
         break;
 }
-
